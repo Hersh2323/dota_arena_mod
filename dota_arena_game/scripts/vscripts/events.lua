@@ -70,10 +70,65 @@ function barebones:OnNPCSpawned(keys)
 
 	-- Put things here that will happen for every unit or hero when they spawn
 
+
+
+
+
+
+
+
 	-- OnHeroInGame
 	if npc:IsRealHero() and npc.bFirstSpawned == nil then
 		npc.bFirstSpawned = true
 		self:OnHeroInGame(npc)
+
+
+
+
+		if GetMapName() == "arena" then
+			if npc:IsRealHero() and IsServer() then
+
+				local heroCheckTeam = npc:GetTeam()
+				print("[GLOBALED] Printing to console current heroCheckTeam variable: "..heroCheckTeam)   
+
+				if heroCheckTeam == 2 then
+					-- 2 = radiant
+
+					GLOBALED_GAMEMODE_TOTAL_HEROES_RADIANT = GLOBALED_GAMEMODE_TOTAL_HEROES_RADIANT+1
+					print("[GLOBALED] GameMode:OnHeroInGame: Printing to console current GLOBALED_GAMEMODE_TOTAL_HEROES_RADIANT variable: "..GLOBALED_GAMEMODE_TOTAL_HEROES_RADIANT)
+
+					GLOBALED_GAMEMODE_TOTAL_HEROES_ALIVE_RADIANT = GLOBALED_GAMEMODE_TOTAL_HEROES_ALIVE_RADIANT+1
+					print("[GLOBALED] GameMode:OnHeroInGame: Printing to console current GLOBALED_GAMEMODE_TOTAL_HEROES_ALIVE_RADIANT variable: "..GLOBALED_GAMEMODE_TOTAL_HEROES_ALIVE_RADIANT)
+
+					GLOBALED_GAMEMODE_KILLS_TO_WIN_ROUND_DIRE = GLOBALED_GAMEMODE_TOTAL_HEROES_RADIANT
+					print("[GLOBALED] GameMode:OnHeroInGame: Printing to console current GLOBALED_GAMEMODE_KILLS_TO_WIN_ROUND_DIRE variable: "..GLOBALED_GAMEMODE_KILLS_TO_WIN_ROUND_DIRE)   
+
+
+				elseif heroCheckTeam == 3 then
+					-- 3 = dire  
+
+					GLOBALED_GAMEMODE_TOTAL_HEROES_DIRE = GLOBALED_GAMEMODE_TOTAL_HEROES_DIRE+1
+					print("[GLOBALED] GameMode:OnHeroInGame: Printing to console current GLOBALED_GAMEMODE_TOTAL_HEROES_DIRE variable: "..GLOBALED_GAMEMODE_TOTAL_HEROES_DIRE)   
+
+					GLOBALED_GAMEMODE_TOTAL_HEROES_ALIVE_DIRE = GLOBALED_GAMEMODE_TOTAL_HEROES_ALIVE_DIRE+1
+					print("[GLOBALED] GameMode:OnHeroInGame: Printing to console current GLOBALED_GAMEMODE_TOTAL_HEROES_ALIVE_DIRE variable: "..GLOBALED_GAMEMODE_TOTAL_HEROES_ALIVE_DIRE)
+
+					GLOBALED_GAMEMODE_KILLS_TO_WIN_ROUND_RADIANT = GLOBALED_GAMEMODE_TOTAL_HEROES_DIRE
+					print("[GLOBALED] GameMode:OnHeroInGame: Printing to console current GLOBALED_GAMEMODE_KILLS_TO_WIN_ROUND_RADIANT variable: "..GLOBALED_GAMEMODE_KILLS_TO_WIN_ROUND_RADIANT)   
+
+				else
+				end
+
+			else
+			end
+
+		else
+		end
+
+
+
+
+
 	end
 end
 
@@ -699,6 +754,38 @@ function barebones:OnEntityKilled(keys)
 			PlayerResource:RemoveFromSelection(playerID, killed_unit)
 		end
 	end
+
+
+	if killed_unit:IsRealHero() then
+
+		if GetMapName() == "arena" and IsServer() then
+			local killedUnitTeam = killed_unit:GetTeam()
+			print("[GLOBALED] GameMode:OnEntityKilled: Printing to console current killedUnitTeam variable: "..killedUnitTeam)
+
+			if killedUnitTeam == 2 and killed_unit:IsRealHero() then
+			        -- 2 = radiant
+			    GLOBALED_GAMEMODE_DIRE_KILLS = GLOBALED_GAMEMODE_DIRE_KILLS+1
+			    print("[GLOBALED] GameMode:OnEntityKilled: Printing to console current GLOBALED_GAMEMODE_DIRE_KILLS variable: "..GLOBALED_GAMEMODE_DIRE_KILLS)
+			    GLOBALED_GAMEMODE_TOTAL_HEROES_ALIVE_RADIANT = GLOBALED_GAMEMODE_TOTAL_HEROES_ALIVE_RADIANT-1
+			    print("[GLOBALED] GameMode:OnEntityKilled: Printing to console current GLOBALED_GAMEMODE_TOTAL_HEROES_ALIVE_RADIANT variable: "..GLOBALED_GAMEMODE_TOTAL_HEROES_ALIVE_RADIANT)
+
+			elseif killedUnitTeam == 3 and killed_unit:IsRealHero() then
+			    -- 3 = dire
+			    GLOBALED_GAMEMODE_RADIANT_KILLS = GLOBALED_GAMEMODE_RADIANT_KILLS+1
+			    print("[GLOBALED] GameMode:OnEntityKilled: Printing to console current GLOBALED_GAMEMODE_RADIANT_KILLS variable: "..GLOBALED_GAMEMODE_RADIANT_KILLS)
+			    GLOBALED_GAMEMODE_TOTAL_HEROES_ALIVE_DIRE = GLOBALED_GAMEMODE_TOTAL_HEROES_ALIVE_DIRE-1
+			    print("[GLOBALED] GameMode:OnEntityKilled: Printing to console current GLOBALED_GAMEMODE_TOTAL_HEROES_ALIVE_DIRE variable: "..GLOBALED_GAMEMODE_TOTAL_HEROES_ALIVE_DIRE)
+
+			else
+			end
+		else
+		end
+		
+	end
+
+
+
+
 end
 
 -- This function is called once when the player fully connects and becomes "Ready" during Loading

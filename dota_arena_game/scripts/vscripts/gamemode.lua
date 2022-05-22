@@ -73,6 +73,94 @@ function barebones:OnGameInProgress()
 
 	-- If the day/night is not changed at 00:00, uncomment the following line:
 	--GameRules:SetTimeOfDay(0.251)
+
+
+  GameRules:SendCustomMessage("Welcome to Dota Arena Alpha.", 0, 0)
+  GameRules:SendCustomMessage("Looking to try out Dota Arena? Please contact Hersh#2582 on discord.", 0, 0)
+
+
+
+
+
+	if GetMapName() == "arena" then
+
+
+
+		Timers:CreateTimer(2, -- Start this timer 5 game-time seconds later
+		function()
+			print("[GLOBALED] This prints every 8s. Checking to see if one team has no alive heroes.")      
+
+
+			if GLOBALED_GAMEMODE_TOTAL_HEROES_ALIVE_RADIANT == 0 and GLOBALED_GAMEMODE_TOTAL_HEROES_RADIANT >= 1 then
+
+				GLOBALED_GAMEMODE_ROUNDS_WON_DIRE = GLOBALED_GAMEMODE_ROUNDS_WON_DIRE+1
+				print("[GLOBALED] GameMode:OnEntityKilled: Printing to console current GLOBALED_GAMEMODE_ROUNDS_WON_DIRE variable: "..GLOBALED_GAMEMODE_ROUNDS_WON_DIRE)
+				--ShowMessage('[GLOBALED] Dire Round wins:' .. GLOBALED_GAMEMODE_ROUNDS_WON_DIRE)
+
+				GameRules:GetGameModeEntity():SetTopBarTeamValue(3, GLOBALED_GAMEMODE_ROUNDS_WON_DIRE)
+
+				Notifications:TopToAll({text="Round victory for the Dire!", duration=5.0})
+
+				globaled_respawn_heroes()
+
+			elseif GLOBALED_GAMEMODE_TOTAL_HEROES_ALIVE_DIRE == 0 and GLOBALED_GAMEMODE_TOTAL_HEROES_DIRE >= 1 then
+
+				GLOBALED_GAMEMODE_ROUNDS_WON_RADIANT = GLOBALED_GAMEMODE_ROUNDS_WON_RADIANT+1
+				print("[GLOBALED] GameMode:OnEntityKilled: Printing to console current GLOBALED_GAMEMODE_ROUNDS_WON_RADIANT variable: "..GLOBALED_GAMEMODE_ROUNDS_WON_RADIANT)
+				--ShowMessage('[GLOBALED] Dire Round wins:' .. GLOBALED_GAMEMODE_ROUNDS_WON_RADIANT)
+
+				--UTIL_MessageTextAll('[GLOBALED] Radiant Round wins:' .. GLOBALED_GAMEMODE_ROUNDS_WON_RADIANT, 255, 255, 255, 255)
+
+				GameRules:GetGameModeEntity():SetTopBarTeamValue(2, GLOBALED_GAMEMODE_ROUNDS_WON_RADIANT)
+
+				Notifications:TopToAll({text="Round victory for the Radiant!", duration=5.0})
+
+				globaled_respawn_heroes()
+
+			else
+			end
+
+				-- overall
+				print("[GLOBALED] GAME STATUS: Printing to console current  variable: GLOBALED_GAMEMODE_ROUNDS:" .. GLOBALED_GAMEMODE_ROUNDS)
+				print("[GLOBALED] GAME STATUS: Printing to console current  variable: GLOBALED_GAMEMODE_ROUNDS_TO_WIN:" .. GLOBALED_GAMEMODE_ROUNDS_TO_WIN)
+				print("[GLOBALED] GAME STATUS: Printing to console current  variable: GLOBALED_GAMEMODE_ROUNDS_WON_RADIANT:" .. GLOBALED_GAMEMODE_ROUNDS_WON_RADIANT)
+				print("[GLOBALED] GAME STATUS: Printing to console current  variable: GLOBALED_GAMEMODE_ROUNDS_WON_DIRE:" .. GLOBALED_GAMEMODE_ROUNDS_WON_DIRE)
+
+				-- radiant
+				print("[GLOBALED] GAME STATUS: Printing to console current  variable: GLOBALED_GAMEMODE_KILLS_TO_WIN_ROUND_RADIANT:" .. GLOBALED_GAMEMODE_KILLS_TO_WIN_ROUND_RADIANT)
+				print("[GLOBALED] GAME STATUS: Printing to console current  variable: GLOBALED_GAMEMODE_RADIANT_KILLS:" .. GLOBALED_GAMEMODE_RADIANT_KILLS)
+				print("[GLOBALED] GAME STATUS: Printing to console current  variable: GLOBALED_GAMEMODE_TOTAL_HEROES_RADIANT:" .. GLOBALED_GAMEMODE_TOTAL_HEROES_RADIANT)
+				print("[GLOBALED] GAME STATUS: Printing to console current  variable: GLOBALED_GAMEMODE_TOTAL_HEROES_ALIVE_RADIANT:" .. GLOBALED_GAMEMODE_TOTAL_HEROES_ALIVE_RADIANT)
+
+				-- dire
+				print("[GLOBALED] GAME STATUS: Printing to console current  variable: GLOBALED_GAMEMODE_KILLS_TO_WIN_ROUND_DIRE:" .. GLOBALED_GAMEMODE_KILLS_TO_WIN_ROUND_DIRE)
+				print("[GLOBALED] GAME STATUS: Printing to console current  variable: GLOBALED_GAMEMODE_DIRE_KILLS:" .. GLOBALED_GAMEMODE_DIRE_KILLS)
+				print("[GLOBALED] GAME STATUS: Printing to console current  variable: GLOBALED_GAMEMODE_TOTAL_HEROES_DIRE:" .. GLOBALED_GAMEMODE_TOTAL_HEROES_DIRE)
+				print("[GLOBALED] GAME STATUS: Printing to console current  variable: GLOBALED_GAMEMODE_TOTAL_HEROES_ALIVE_DIRE:" .. GLOBALED_GAMEMODE_TOTAL_HEROES_ALIVE_DIRE)
+
+
+
+			if GLOBALED_GAMEMODE_ROUNDS_WON_DIRE == GLOBALED_GAMEMODE_ROUNDS_TO_WIN then
+
+				GameRules:SetGameWinner( DOTA_TEAM_BADGUYS )
+				GameRules:SetSafeToLeave( true )
+
+			elseif GLOBALED_GAMEMODE_ROUNDS_WON_RADIANT == GLOBALED_GAMEMODE_ROUNDS_TO_WIN then
+
+				GameRules:SetGameWinner( DOTA_TEAM_GOODGUYS )
+				GameRules:SetSafeToLeave( true )
+
+			end
+
+
+
+		return 8.0 -- Rerun this timer every 5 game-time seconds
+		end)    
+
+
+	else
+	end
+
 end
 
 -- This function initializes the game mode and is called before anyone loads into the game
@@ -289,3 +377,22 @@ function barebones:CaptureGameMode()
 		gamemode:SetFreeCourierModeEnabled(true) -- without this, passive GPM doesn't work, Thanks Valve
 	end
 end
+
+
+function globaled_respawn_heroes( event )
+  local heroes = HeroList:GetAllHeroes()
+  for  _,hero in pairs(heroes) do 
+    if hero:IsRealHero() then 
+
+      hero:Purge( true, true, false, true, false)
+      hero:SetRespawnsDisabled(false)
+      hero:RespawnHero(true, false)
+      hero:RemoveModifierByName("modifier_invisible")
+    end
+  end
+
+  GLOBALED_GAMEMODE_TOTAL_HEROES_ALIVE_DIRE = GLOBALED_GAMEMODE_TOTAL_HEROES_DIRE
+  GLOBALED_GAMEMODE_TOTAL_HEROES_ALIVE_RADIANT = GLOBALED_GAMEMODE_TOTAL_HEROES_RADIANT
+
+end 
+

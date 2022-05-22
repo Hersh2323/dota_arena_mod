@@ -14,6 +14,7 @@ require('libraries/player_resource')             -- Core lua library
 require('gamemode')                              -- Core barebones file
 require('libraries/animations')                              -- Core barebones file
 require('libraries/popups')                              -- Core barebones file
+require('libraries/notifications')                              -- Core barebones file
 
 function Precache(context)
 --[[

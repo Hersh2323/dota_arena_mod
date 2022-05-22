@@ -1,39 +1,45 @@
 -- In this file you can set up all the properties and settings for your game mode.
 USE_DEBUG = false                       -- Should we print statements on almost every function/event call? For debugging.
 
-ENABLE_HERO_RESPAWN = true              -- Should the heroes automatically respawn on a timer or stay dead until manually respawned
+if GetMapName() == "arena" then
+	ENABLE_HERO_RESPAWN = false              -- Should the heroes automatically respawn on a timer or stay dead until manually respawned
+else
+	ENABLE_HERO_RESPAWN = true              -- Should the heroes automatically respawn on a timer or stay dead until manually respawned	
+end
+
+
 UNIVERSAL_SHOP_MODE = false             -- Should the shops contain all items?
-ALLOW_SAME_HERO_SELECTION = false       -- Should we let people select the same hero as each other
+ALLOW_SAME_HERO_SELECTION = true       -- Should we let people select the same hero as each other
 LOCK_TEAMS = false                      -- Should we Lock (true) or unlock (false) team assignemnt. If team assignment is locked players cannot change teams.
 
 CUSTOM_GAME_SETUP_TIME = 25.0           -- How long should custom game setup last - the screen where players pick a team?
-HERO_SELECTION_TIME = 30.0              -- How long should we let people select their hero? Should be at least 5 seconds.
+HERO_SELECTION_TIME = 75.0              -- How long should we let people select their hero? Should be at least 5 seconds.
 HERO_SELECTION_PENALTY_TIME = 30.0      -- How long should the penalty time for not picking a hero last? During this time player loses gold.
 ENABLE_BANNING_PHASE = false            -- Should we enable banning phase? Set to true if "EnablePickRules" is "1" in 'addoninfo.txt'
 BANNING_PHASE_TIME = 20.0               -- How long should the banning phase last? This will work only if "EnablePickRules" is "1" in 'addoninfo.txt'
 STRATEGY_TIME = 20.0                    -- How long should strategy time last? Bug: You can buy items during strategy time and it will not be spent!
 SHOWCASE_TIME = 12.0                    -- How long should show case time be?
-PRE_GAME_TIME = 90.0                    -- How long after showcase time should the horn blow and the game start?
+PRE_GAME_TIME = 1.0                    -- How long after showcase time should the horn blow and the game start?
 POST_GAME_TIME = 60.0                   -- How long should we let people stay around before closing the server automatically?
-TREE_REGROW_TIME = 300.0                -- How long should it take individual trees to respawn after being cut down/destroyed?
+TREE_REGROW_TIME = 60.0                -- How long should it take individual trees to respawn after being cut down/destroyed?
 
---GOLD_PER_TICK = 100                     -- How much gold should players get per tick? DOESN'T WORK
---GOLD_TICK_TIME = 1.0                    -- How long should we wait in seconds between gold ticks? DOESN'T WORK
+GOLD_PER_TICK = 0                     -- How much gold should players get per tick? DOESN'T WORK
+GOLD_TICK_TIME = 0                    -- How long should we wait in seconds between gold ticks? DOESN'T WORK
 
 NORMAL_START_GOLD = 600                 -- Starting Gold
 
-RECOMMENDED_BUILDS_DISABLED = false     -- Should we disable the recommended item builds for heroes? Turns the panel for showing recommended items at the shop off/on.
-CAMERA_DISTANCE_OVERRIDE = 1134.0       -- How far out should we allow the camera to go? 1134 is the default in Dota.
+RECOMMENDED_BUILDS_DISABLED = true     -- Should we disable the recommended item builds for heroes? Turns the panel for showing recommended items at the shop off/on.
+CAMERA_DISTANCE_OVERRIDE = 1350.0       -- How far out should we allow the camera to go? 1134 is the default in Dota.
 
-MINIMAP_ICON_SIZE = 1                   -- What icon size should we use for our heroes?
-MINIMAP_CREEP_ICON_SIZE = 1             -- What icon size should we use for creeps?
-MINIMAP_RUNE_ICON_SIZE = 1              -- What icon size should we use for runes?
+MINIMAP_ICON_SIZE = 1.25                   -- What icon size should we use for our heroes?
+MINIMAP_CREEP_ICON_SIZE = 1.25             -- What icon size should we use for creeps?
+MINIMAP_RUNE_ICON_SIZE = 1.25              -- What icon size should we use for runes?
 
-BUYBACK_ENABLED = true                  -- Should we allow players to buyback when they die?
+BUYBACK_ENABLED = false                  -- Should we allow players to buyback when they die?
 CUSTOM_BUYBACK_COST_ENABLED = false     -- Should we use a custom buyback cost setting?
 CUSTOM_BUYBACK_COOLDOWN_ENABLED = false -- Should we use a custom buyback time?
 CUSTOM_BUYBACK_COOLDOWN_TIME = 480.0    -- Custom buyback cooldown time (needed if CUSTOM_BUYBACK_COOLDOWN_ENABLED is true).
-BUYBACK_FIXED_GOLD_COST = 500           -- Fixed custom buyback gold cost (needed if CUSTOM_BUYBACK_COST_ENABLED is true).
+BUYBACK_FIXED_GOLD_COST = 9999           -- Fixed custom buyback gold cost (needed if CUSTOM_BUYBACK_COST_ENABLED is true).
 
 CUSTOM_SCAN_COOLDOWN = 210              -- Custom cooldown of Scan in seconds. Doesn't affect Scan's starting cooldown!
 CUSTOM_GLYPH_COOLDOWN = 300             -- Custom cooldown of Glyph in seconds. Doesn't affect Glyph's starting cooldown!
@@ -44,26 +50,26 @@ USE_UNSEEN_FOG_OF_WAR = false           -- Should we make unseen and fogged area
 USE_STANDARD_DOTA_BOT_THINKING = false  -- Should we have bots act like they would in Dota? (This requires 3 lanes, vanilla items, vanilla heroes etc)
 
 USE_CUSTOM_HERO_GOLD_BOUNTY = false     -- Should the gold for hero kills be modified (true) or same as in default Dota (false)?
-HERO_KILL_GOLD_BASE = 110               -- Hero gold bounty base value
-HERO_KILL_GOLD_PER_LEVEL = 10           -- Hero gold bounty increase per level
-HERO_KILL_GOLD_PER_STREAK = 60          -- Hero gold bounty per his kill-streak (Killing Spree: +HERO_KILL_GOLD_PER_STREAK gold; Ultrakill: +2 x HERO_KILL_GOLD_PER_STREAK gold ...)
-DISABLE_ALL_GOLD_FROM_HERO_KILLS = false    -- Should we remove gold gain from hero kills? USE_CUSTOM_HERO_GOLD_BOUNTY needs to be true.
+HERO_KILL_GOLD_BASE = 0               -- Hero gold bounty base value
+HERO_KILL_GOLD_PER_LEVEL = 0           -- Hero gold bounty increase per level
+HERO_KILL_GOLD_PER_STREAK = 0          -- Hero gold bounty per his kill-streak (Killing Spree: +HERO_KILL_GOLD_PER_STREAK gold; Ultrakill: +2 x HERO_KILL_GOLD_PER_STREAK gold ...)
+DISABLE_ALL_GOLD_FROM_HERO_KILLS = true    -- Should we remove gold gain from hero kills? USE_CUSTOM_HERO_GOLD_BOUNTY needs to be true.
 -- NOTE: DISABLE_ALL_GOLD_FROM_HERO_KILLS requires GoldFilter.
 USE_CUSTOM_HERO_LEVELS = false          -- Should the heroes give a custom amount of XP when killed? Can malfunction for levels above 30!
 
 USE_CUSTOM_TOP_BAR_VALUES = true        -- Should we do customized top bar values or use the default kill count per team?
 TOP_BAR_VISIBLE = true                  -- Should we display the top bar score/count at all?
-SHOW_KILLS_ON_TOPBAR = true             -- Should we display kills only on the top bar? (No denies, suicides, kills by neutrals)  Requires USE_CUSTOM_TOP_BAR_VALUES
+SHOW_KILLS_ON_TOPBAR = false             -- Should we display kills only on the top bar? (No denies, suicides, kills by neutrals)  Requires USE_CUSTOM_TOP_BAR_VALUES
 
-ENABLE_TOWER_BACKDOOR_PROTECTION = true -- Should we enable backdoor protection for our buildings?
+ENABLE_TOWER_BACKDOOR_PROTECTION = false -- Should we enable backdoor protection for our buildings?
 --REMOVE_ILLUSIONS_ON_DEATH = false       -- Should we remove all illusions if the main hero dies? DOESN'T WORK
-DISABLE_GOLD_SOUNDS = false             -- Should we disable the gold sound when players acquire gold?
+DISABLE_GOLD_SOUNDS = true             -- Should we disable the gold sound when players acquire gold?
 
 END_GAME_ON_KILLS = false               -- Should the game end after a certain number of kills?
 KILLS_TO_END_GAME_FOR_TEAM = 100        -- How many kills for a team should signify an end of game?
 
 USE_CUSTOM_XP_VALUES = false            -- Should we use custom XP values to level up heroes, or the default Dota numbers?
-MAX_LEVEL = 30                          -- What level should we let heroes get to? (USE_CUSTOM_XP_VALUES must be true).
+MAX_LEVEL = 6                          -- What level should we let heroes get to? (USE_CUSTOM_XP_VALUES must be true).
 -- NOTE: MAX_LEVEL and XP_PER_LEVEL_TABLE will not work if USE_CUSTOM_XP_VALUES is false or nil.
 
 -- Fill this table up with the required XP per level if you want to change it
@@ -73,12 +79,13 @@ for i = 2, MAX_LEVEL do
   XP_PER_LEVEL_TABLE[i] = XP_PER_LEVEL_TABLE[i-1] + i*100
 end
 
-ENABLE_FIRST_BLOOD = true               -- Should we enable first blood for the first kill in this game?
-HIDE_KILL_BANNERS = false               -- Should we hide the kill banners that show when a player is killed?
-LOSE_GOLD_ON_DEATH = true               -- Should we have players lose the normal amount of dota gold on death?
+
+ENABLE_FIRST_BLOOD = false               -- Should we enable first blood for the first kill in this game?
+HIDE_KILL_BANNERS = true               -- Should we hide the kill banners that show when a player is killed?
+LOSE_GOLD_ON_DEATH = false               -- Should we have players lose the normal amount of dota gold on death?
 SHOW_ONLY_PLAYER_INVENTORY = false      -- Should we allow players to only see their own inventory even when selecting other units?
-DISABLE_STASH_PURCHASING = false        -- Should we prevent players from being able to buy items into their stash when not at a shop?
-DISABLE_ANNOUNCER = false               -- Should we disable the announcer from working in the game?
+DISABLE_STASH_PURCHASING = true        -- Should we prevent players from being able to buy items into their stash when not at a shop?
+DISABLE_ANNOUNCER = true               -- Should we disable the announcer from working in the game?
 FORCE_PICKED_HERO = nil                 -- What hero should we force all players to spawn as? (e.g. "npc_dota_hero_axe").  Use nil to allow players to pick their own hero.
 -- This will not work if "EnablePickRules" is "1" in 'addoninfo.txt'!
 
@@ -128,16 +135,16 @@ FOUNTAIN_PERCENTAGE_HEALTH_REGEN = -1   -- What should we use for the percentage
 MAXIMUM_ATTACK_SPEED = 700              -- What should we use for the maximum attack speed?
 MINIMUM_ATTACK_SPEED = 10               -- What should we use for the minimum attack speed?
 
-DISABLE_DAY_NIGHT_CYCLE = false         -- Should we disable the day night cycle from naturally occurring? (Manual adjustment still possible)
-DISABLE_KILLING_SPREE_ANNOUNCER = false -- Should we disable the killing spree announcer?
-DISABLE_STICKY_ITEM = false             -- Should we disable the sticky item button in the quick buy area?
-ENABLE_PAUSING = true                   -- Should we allow players to pause the game?
-DEFAULT_DOTA_COURIER = true             -- Enable courier for each player with default dota properties
+DISABLE_DAY_NIGHT_CYCLE = true         -- Should we disable the day night cycle from naturally occurring? (Manual adjustment still possible)
+DISABLE_KILLING_SPREE_ANNOUNCER = true -- Should we disable the killing spree announcer?
+DISABLE_STICKY_ITEM = true             -- Should we disable the sticky item button in the quick buy area?
+ENABLE_PAUSING = false                   -- Should we allow players to pause the game?
+DEFAULT_DOTA_COURIER = false             -- Enable courier for each player with default dota properties
 
 FORCE_MINIMAP_ON_THE_LEFT = false       -- Should we disable hud flip aka force the default dota hud positions? 
 -- Note: Some players have minimap on the right and gold/shop on the left.
 
-USE_DEFAULT_RUNE_SYSTEM = true          -- Should we use the default dota rune spawn timings and the same runes as dota have?
+USE_DEFAULT_RUNE_SYSTEM = false          -- Should we use the default dota rune spawn timings and the same runes as dota have?
 BOUNTY_RUNE_SPAWN_INTERVAL = 300        -- How long in seconds should we wait between bounty rune spawns? BUGGED! WORKS FOR POWERUPS TOO!
 POWER_RUNE_SPAWN_INTERVAL = 120         -- How long in seconds should we wait between power-up runes spawns? BUGGED! WORKS FOR BOUNTIES TOO!
 
@@ -178,3 +185,27 @@ CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_CUSTOM_5] = 0
 CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_CUSTOM_6] = 0
 CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_CUSTOM_7] = 0
 CUSTOM_TEAM_PLAYER_COUNT[DOTA_TEAM_CUSTOM_8] = 0
+
+
+if GetMapName()	== "arena" then
+
+	GLOBALED_GAMEMODE_ROUNDS = 5
+	GLOBALED_GAMEMODE_ROUNDS_TO_WIN = 3
+
+	GLOBALED_GAMEMODE_ROUNDS_WON_DIRE = 0
+	GLOBALED_GAMEMODE_ROUNDS_WON_RADIANT = 0
+
+	GLOBALED_GAMEMODE_KILLS_TO_WIN_ROUND_DIRE = 0
+	GLOBALED_GAMEMODE_KILLS_TO_WIN_ROUND_RADIANT = 0
+
+	GLOBALED_GAMEMODE_DIRE_KILLS = 0
+	GLOBALED_GAMEMODE_RADIANT_KILLS = 0
+
+	GLOBALED_GAMEMODE_TOTAL_HEROES_DIRE = 0
+	GLOBALED_GAMEMODE_TOTAL_HEROES_RADIANT = 0
+
+	GLOBALED_GAMEMODE_TOTAL_HEROES_ALIVE_DIRE = 0
+	GLOBALED_GAMEMODE_TOTAL_HEROES_ALIVE_RADIANT = 0
+	GLOBALED_GAMEMODE_POPUP_DURATION = 5.0
+else
+end
