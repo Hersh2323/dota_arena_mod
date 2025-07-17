@@ -45,7 +45,7 @@
 
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
-        "AbilityLayout"    "8"
+        "AbilityLayout"    "6"
 
 		"Ability1"				"frc_ds"								// Ability 1
 		"Ability2"				"frc_silence"								// Ability 2
@@ -54,9 +54,25 @@
  		"Ability5"				"frc_aquamusprime"
  		"Ability6"				"frc_pb"
 
-        "Ability7"      "barebones_empty1"
+        "Ability7"      "barebones_empty7"
         "Ability8"      "all_heroes_gcd_datadriven"
- 
+        "Ability9"      "barebones_empty9"
+        "Ability10"      "barebones_empty10"
+        "Ability11"      "barebones_empty11"
+        "Ability12"      "barebones_empty12"
+        "Ability13"      "barebones_empty13"
+        "Ability14"      "barebones_empty14"
+        "Ability15"      "barebones_empty15"
+        "Ability16"      "barebones_empty16"
+        "Ability17"      "barebones_empty17"
+        "Ability18"      "barebones_empty18"
+        "Ability19"      "barebones_empty19"
+        "Ability20"      "barebones_empty20"
+        "Ability21"      "barebones_empty21"
+        "Ability22"      "barebones_empty22"
+        "Ability23"      "barebones_empty23"
+        "Ability24"      "barebones_empty24"
+
 		// Armor
 		//-------------------------------------------------------------------------------------------------------------
 		"ArmorPhysical"			"-3"											// Physical protection.

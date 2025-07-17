@@ -330,6 +330,156 @@
 		"AbilityTextureName"            "rubick_empty1"
 	}
 
+	"barebones_empty13"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"              "5343"                            // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"            "0"
+		"BaseClass"           "ability_datadriven"
+		"AbilityTextureName"            "rubick_empty1"
+	}
+
+	"barebones_empty14"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"              "5343"                            // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"            "0"
+		"BaseClass"           "ability_datadriven"
+		"AbilityTextureName"            "rubick_empty1"
+	}
+
+	"barebones_empty15"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"              "5343"                            // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"            "0"
+		"BaseClass"           "ability_datadriven"
+		"AbilityTextureName"            "rubick_empty1"
+	}
+
+	"barebones_empty16"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"              "5343"                            // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"            "0"
+		"BaseClass"           "ability_datadriven"
+		"AbilityTextureName"            "rubick_empty1"
+	}
+
+
+	"barebones_empty17"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"              "5343"                            // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"            "0"
+		"BaseClass"           "ability_datadriven"
+		"AbilityTextureName"            "rubick_empty1"
+	}
+
+
+	"barebones_empty18"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"              "5343"                            // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"            "0"
+		"BaseClass"           "ability_datadriven"
+		"AbilityTextureName"            "rubick_empty1"
+	}
+
+
+	"barebones_empty19"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"              "5343"                            // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"            "0"
+		"BaseClass"           "ability_datadriven"
+		"AbilityTextureName"            "rubick_empty1"
+	}
+
+
+
+	"barebones_empty20"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"              "5343"                            // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"            "0"
+		"BaseClass"           "ability_datadriven"
+		"AbilityTextureName"            "rubick_empty1"
+	}
+
+
+
+	"barebones_empty21"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"              "5343"                            // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"            "0"
+		"BaseClass"           "ability_datadriven"
+		"AbilityTextureName"            "rubick_empty1"
+	}
+
+
+	"barebones_empty22"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"              "5343"                            // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"            "0"
+		"BaseClass"           "ability_datadriven"
+		"AbilityTextureName"            "rubick_empty1"
+	}
+
+
+	"barebones_empty23"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"              "5343"                            // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"            "0"
+		"BaseClass"           "ability_datadriven"
+		"AbilityTextureName"            "rubick_empty1"
+	}
+
+
+	"barebones_empty24"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"              "5343"                            // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"            "0"
+		"BaseClass"           "ability_datadriven"
+		"AbilityTextureName"            "rubick_empty1"
+	}
+
+
+
+
+
+
+
+
+
 	"frc_b"
 	{
 		// General
