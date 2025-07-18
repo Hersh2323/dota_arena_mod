@@ -305,7 +305,7 @@
 
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityLayout"			"8"
+		"AbilityLayout"			"6"
 		"Ability1"				"pa_meld_revision"				
 		"Ability2"				"sma_phantomstrike"						
 		"Ability3"				"pa_impair"
@@ -314,7 +314,25 @@
 		"Ability6"				"sma_pb"					
 
         "Ability7"      "barebones_empty1"
-        "Ability8"      "all_heroes_gcd_datadriven"
+        "Ability8"      "barebones_empty8"
+        "Ability9"      "barebones_empty9"
+        "Ability10"      "barebones_empty10"
+        "Ability11"      "barebones_empty11"
+        "Ability12"      "barebones_empty12"
+        "Ability13"      "barebones_empty13"
+        "Ability14"      "barebones_empty14"
+        "Ability15"      "barebones_empty15"
+        "Ability16"      "barebones_empty16"
+        "Ability17"      "barebones_empty17"
+        "Ability18"      "barebones_empty18"
+        "Ability19"      "barebones_empty19"
+        "Ability20"      "barebones_empty20"
+        "Ability21"      "barebones_empty21"
+        "Ability22"      "barebones_empty22"
+        "Ability23"      "barebones_empty23"
+        "Ability24"      "barebones_empty24"
+
+
 
 
 		// Attack
@@ -576,7 +594,7 @@
 
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityLayout"				"8"
+		"AbilityLayout"				"6"
 		"Ability1"					"storm_spirit_absorb"  
 		"Ability2"					"ch_h"		  
 		"Ability3"					"storm_spirit_channel_heal"	
@@ -584,8 +602,26 @@
 		"Ability5"					"ch_absorb"	   
 		"Ability6"					"storm_spirit_pb"
 
-        "Ability7"      "barebones_empty1"
-        "Ability8"      "all_heroes_gcd_datadriven"
+        "Ability7"      "barebones_empty7"
+        "Ability8"      "barebones_empty8"
+        "Ability9"      "barebones_empty9"
+        "Ability10"      "barebones_empty10"
+        "Ability11"      "barebones_empty11"
+        "Ability12"      "barebones_empty12"
+        "Ability13"      "barebones_empty13"
+        "Ability14"      "barebones_empty14"
+        "Ability15"      "barebones_empty15"
+        "Ability16"      "barebones_empty16"
+        "Ability17"      "barebones_empty17"
+        "Ability18"      "barebones_empty18"
+        "Ability19"      "barebones_empty19"
+        "Ability20"      "barebones_empty20"
+        "Ability21"      "barebones_empty21"
+        "Ability22"      "barebones_empty22"
+        "Ability23"      "barebones_empty23"
+        "Ability24"      "barebones_empty24"
+
+
 
 
 		// Armor
@@ -761,7 +797,7 @@
 
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityLayout"				"8"
+		"AbilityLayout"				"6"
 
 		"Ability1"					"necrolyte_harvest_season"			// Ability 1
 		"Ability2"					"necrolyte_fester"					// Ability 2
@@ -771,7 +807,23 @@
 		"Ability6"					"necrolyte_pb"						// Ability 6
 
         "Ability7"      "barebones_empty1"
-        "Ability8"      "all_heroes_gcd_datadriven"
+        "Ability8"      "barebones_empty8"
+        "Ability9"      "barebones_empty9"
+        "Ability10"      "barebones_empty10"
+        "Ability11"      "barebones_empty11"
+        "Ability12"      "barebones_empty12"
+        "Ability13"      "barebones_empty13"
+        "Ability14"      "barebones_empty14"
+        "Ability15"      "barebones_empty15"
+        "Ability16"      "barebones_empty16"
+        "Ability17"      "barebones_empty17"
+        "Ability18"      "barebones_empty18"
+        "Ability19"      "barebones_empty19"
+        "Ability20"      "barebones_empty20"
+        "Ability21"      "barebones_empty21"
+        "Ability22"      "barebones_empty22"
+        "Ability23"      "barebones_empty23"
+        "Ability24"      "barebones_empty24"
 
 
 		// Armor
@@ -1043,7 +1095,7 @@
 
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityLayout"				"8"
+		"AbilityLayout"				"6"
 		"Ability1"					"drow_slow_shot"
 		"Ability2"					"drow_poison_sting"
 		"Ability3"					"drow_silence"
@@ -1051,8 +1103,24 @@
 		"Ability5"					"drow_buddy"
 		"Ability6"					"drow_pb"
 
-        "Ability7"      "barebones_empty1"
-        "Ability8"      "all_heroes_gcd_datadriven"
+        "Ability7"      "barebones_empty7"
+        "Ability8"      "barebones_empty8"
+        "Ability9"      "barebones_empty9"
+        "Ability10"      "barebones_empty10"
+        "Ability11"      "barebones_empty11"
+        "Ability12"      "barebones_empty12"
+        "Ability13"      "barebones_empty13"
+        "Ability14"      "barebones_empty14"
+        "Ability15"      "barebones_empty15"
+        "Ability16"      "barebones_empty16"
+        "Ability17"      "barebones_empty17"
+        "Ability18"      "barebones_empty18"
+        "Ability19"      "barebones_empty19"
+        "Ability20"      "barebones_empty20"
+        "Ability21"      "barebones_empty21"
+        "Ability22"      "barebones_empty22"
+        "Ability23"      "barebones_empty23"
+        "Ability24"      "barebones_empty24"
 
 		// Armor
 		//-------------------------------------------------------------------------------------------------------------
@@ -1358,8 +1426,24 @@
 		"Ability5"				"enchantress_bear_time"
 		"Ability6"				"enchantress_cleanse_poison"
 
-        "Ability7"      "barebones_empty1"
-        "Ability8"      "all_heroes_gcd_datadriven"
+        "Ability7"      "barebones_empty7"
+        "Ability8"      "barebones_empty8"
+        "Ability9"      "barebones_empty9"
+        "Ability10"      "barebones_empty10"
+        "Ability11"      "barebones_empty11"
+        "Ability12"      "barebones_empty12"
+        "Ability13"      "barebones_empty13"
+        "Ability14"      "barebones_empty14"
+        "Ability15"      "barebones_empty15"
+        "Ability16"      "barebones_empty16"
+        "Ability17"      "barebones_empty17"
+        "Ability18"      "barebones_empty18"
+        "Ability19"      "barebones_empty19"
+        "Ability20"      "barebones_empty20"
+        "Ability21"      "barebones_empty21"
+        "Ability22"      "barebones_empty22"
+        "Ability23"      "barebones_empty23"
+        "Ability24"      "barebones_empty24"
 
 
 		// Armor
@@ -1560,7 +1644,7 @@
 
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityLayout"				"8"
+		"AbilityLayout"				"7"
 
 		"Ability1"					"omniknight_heal"
 		"Ability2"					"omniknight_empower"
@@ -1569,8 +1653,24 @@
 		"Ability5"					"omniknight_stun"
 		"Ability6"					"omniknight_pb"
 
-        "Ability7"      "barebones_empty1"
-        "Ability8"      "all_heroes_gcd_datadriven"
+        "Ability7"      "barebones_empty7"
+        "Ability8"      "barebones_empty8"
+        "Ability9"      "barebones_empty9"
+        "Ability10"      "barebones_empty10"
+        "Ability11"      "barebones_empty11"
+        "Ability12"      "barebones_empty12"
+        "Ability13"      "barebones_empty13"
+        "Ability14"      "barebones_empty14"
+        "Ability15"      "barebones_empty15"
+        "Ability16"      "barebones_empty16"
+        "Ability17"      "barebones_empty17"
+        "Ability18"      "barebones_empty18"
+        "Ability19"      "barebones_empty19"
+        "Ability20"      "barebones_empty20"
+        "Ability21"      "barebones_empty21"
+        "Ability22"      "barebones_empty22"
+        "Ability23"      "barebones_empty23"
+        "Ability24"      "barebones_empty24"
 
 		// Armor
 		//-------------------------------------------------------------------------------------------------------------
@@ -1827,7 +1927,7 @@
 		"HeroSelectSoundEffect"		"Hero_BountyHunter.Pick"
 		"GibType"		"default"
 
-		"AbilityLayout"	"8"
+		"AbilityLayout"	"6"
 
 		"Ability1"		"pa_meld_revision"
 		"Ability2"		"bh_phantomstrike"
@@ -1836,8 +1936,24 @@
 		"Ability5"		"bh_haste_strikes"
 		"Ability6"		"bh_bleed_strike"
 
-        "Ability7"      "barebones_empty1"
-        "Ability8"      "all_heroes_gcd_datadriven"
+        "Ability7"      "barebones_empty7"
+        "Ability8"      "barebones_empty8"
+        "Ability9"      "barebones_empty9"
+        "Ability10"      "barebones_empty10"
+        "Ability11"      "barebones_empty11"
+        "Ability12"      "barebones_empty12"
+        "Ability13"      "barebones_empty13"
+        "Ability14"      "barebones_empty14"
+        "Ability15"      "barebones_empty15"
+        "Ability16"      "barebones_empty16"
+        "Ability17"      "barebones_empty17"
+        "Ability18"      "barebones_empty18"
+        "Ability19"      "barebones_empty19"
+        "Ability20"      "barebones_empty20"
+        "Ability21"      "barebones_empty21"
+        "Ability22"      "barebones_empty22"
+        "Ability23"      "barebones_empty23"
+        "Ability24"      "barebones_empty24"
 
 
 		// Armor
@@ -2101,8 +2217,24 @@
  		"Ability5"					"lina_slow_burn"
  		"Ability6"					"lina_pb"
 
-        "Ability7"      			"barebones_empty1"
-        "Ability8"      			"all_heroes_gcd_datadriven"
+        "Ability7"      "barebones_empty7"
+        "Ability8"      "barebones_empty8"
+        "Ability9"      "barebones_empty9"
+        "Ability10"      "barebones_empty10"
+        "Ability11"      "barebones_empty11"
+        "Ability12"      "barebones_empty12"
+        "Ability13"      "barebones_empty13"
+        "Ability14"      "barebones_empty14"
+        "Ability15"      "barebones_empty15"
+        "Ability16"      "barebones_empty16"
+        "Ability17"      "barebones_empty17"
+        "Ability18"      "barebones_empty18"
+        "Ability19"      "barebones_empty19"
+        "Ability20"      "barebones_empty20"
+        "Ability21"      "barebones_empty21"
+        "Ability22"      "barebones_empty22"
+        "Ability23"      "barebones_empty23"
+        "Ability24"      "barebones_empty24"
 
 		// Armor
 		//-------------------------------------------------------------------------------------------------------------
@@ -2344,8 +2476,24 @@
 		"Ability5"					"undying_summon_ghoul"
 		"Ability6"					"undying_pb"
 
-        "Ability7"      "barebones_empty1"
-        "Ability8"      "all_heroes_gcd_datadriven"
+        "Ability7"      "barebones_empty7"
+        "Ability8"      "barebones_empty8"
+        "Ability9"      "barebones_empty9"
+        "Ability10"      "barebones_empty10"
+        "Ability11"      "barebones_empty11"
+        "Ability12"      "barebones_empty12"
+        "Ability13"      "barebones_empty13"
+        "Ability14"      "barebones_empty14"
+        "Ability15"      "barebones_empty15"
+        "Ability16"      "barebones_empty16"
+        "Ability17"      "barebones_empty17"
+        "Ability18"      "barebones_empty18"
+        "Ability19"      "barebones_empty19"
+        "Ability20"      "barebones_empty20"
+        "Ability21"      "barebones_empty21"
+        "Ability22"      "barebones_empty22"
+        "Ability23"      "barebones_empty23"
+        "Ability24"      "barebones_empty24"
 
 		// Armor
 		//-------------------------------------------------------------------------------------------------------------
