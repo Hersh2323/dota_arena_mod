@@ -373,12 +373,12 @@ function barebones:OnHeroInGame(hero)
     hero:HeroLevelUp(false)
     hero:HeroLevelUp(false)
    
-    for abilitySlot=0,17 do
+    for abilitySlot=0,24 do
         local ability = hero:GetAbilityByIndex(abilitySlot)
 
         if ability then
-                        ability:SetLevel(1)
-                        hero:SetAbilityPoints(hero:GetAbilityPoints() - 1)
+			ability:SetLevel(1)
+			hero:SetAbilityPoints(hero:GetAbilityPoints() - 1)
         end
     end
 
