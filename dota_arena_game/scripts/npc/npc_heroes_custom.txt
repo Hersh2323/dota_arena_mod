@@ -72,6 +72,11 @@
         "Ability22"      "barebones_empty22"
         "Ability23"      "barebones_empty23"
         "Ability24"      "barebones_empty24"
+        "Ability25"      "barebones_empty25"
+        "Ability26"      "barebones_empty26"
+        "Ability27"      "barebones_empty27"
+        "Ability28"      "barebones_empty28"
+
 
 		// Armor
 		//-------------------------------------------------------------------------------------------------------------
@@ -331,6 +336,10 @@
         "Ability22"      "barebones_empty22"
         "Ability23"      "barebones_empty23"
         "Ability24"      "barebones_empty24"
+        "Ability25"      "barebones_empty25"
+        "Ability26"      "barebones_empty26"
+        "Ability27"      "barebones_empty27"
+        "Ability28"      "barebones_empty28"
 
 
 
@@ -620,6 +629,10 @@
         "Ability22"      "barebones_empty22"
         "Ability23"      "barebones_empty23"
         "Ability24"      "barebones_empty24"
+        "Ability25"      "barebones_empty25"
+        "Ability26"      "barebones_empty26"
+        "Ability27"      "barebones_empty27"
+        "Ability28"      "barebones_empty28"
 
 
 
@@ -824,6 +837,10 @@
         "Ability22"      "barebones_empty22"
         "Ability23"      "barebones_empty23"
         "Ability24"      "barebones_empty24"
+        "Ability25"      "barebones_empty25"
+        "Ability26"      "barebones_empty26"
+        "Ability27"      "barebones_empty27"
+        "Ability28"      "barebones_empty28"
 
 
 		// Armor
@@ -1121,6 +1138,10 @@
         "Ability22"      "barebones_empty22"
         "Ability23"      "barebones_empty23"
         "Ability24"      "barebones_empty24"
+        "Ability25"      "barebones_empty25"
+        "Ability26"      "barebones_empty26"
+        "Ability27"      "barebones_empty27"
+        "Ability28"      "barebones_empty28"
 
 		// Armor
 		//-------------------------------------------------------------------------------------------------------------
@@ -1417,7 +1438,7 @@
 
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityLayout"			"8"
+		"AbilityLayout"			"6"
 
 		"Ability1"				"enchantress_nuture"
 		"Ability2"				"enchantress_rejuvinate"
@@ -1444,6 +1465,10 @@
         "Ability22"      "barebones_empty22"
         "Ability23"      "barebones_empty23"
         "Ability24"      "barebones_empty24"
+        "Ability25"      "barebones_empty25"
+        "Ability26"      "barebones_empty26"
+        "Ability27"      "barebones_empty27"
+        "Ability28"      "barebones_empty28"
 
 
 		// Armor
@@ -1644,7 +1669,7 @@
 
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityLayout"				"7"
+		"AbilityLayout"				"6"
 
 		"Ability1"					"omniknight_heal"
 		"Ability2"					"omniknight_empower"
@@ -1671,6 +1696,10 @@
         "Ability22"      "barebones_empty22"
         "Ability23"      "barebones_empty23"
         "Ability24"      "barebones_empty24"
+        "Ability25"      "barebones_empty25"
+        "Ability26"      "barebones_empty26"
+        "Ability27"      "barebones_empty27"
+        "Ability28"      "barebones_empty28"
 
 		// Armor
 		//-------------------------------------------------------------------------------------------------------------
@@ -1954,6 +1983,10 @@
         "Ability22"      "barebones_empty22"
         "Ability23"      "barebones_empty23"
         "Ability24"      "barebones_empty24"
+        "Ability25"      "barebones_empty25"
+        "Ability26"      "barebones_empty26"
+        "Ability27"      "barebones_empty27"
+        "Ability28"      "barebones_empty28"
 
 
 		// Armor
@@ -2209,7 +2242,7 @@
 
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityLayout"				"8"
+		"AbilityLayout"				"6"
 		"Ability1"					"lina_ds"								
 		"Ability2"					"frc_silence"							
 		"Ability3"					"frc_b"									
@@ -2235,6 +2268,10 @@
         "Ability22"      "barebones_empty22"
         "Ability23"      "barebones_empty23"
         "Ability24"      "barebones_empty24"
+        "Ability25"      "barebones_empty25"
+        "Ability26"      "barebones_empty26"
+        "Ability27"      "barebones_empty27"
+        "Ability28"      "barebones_empty28"
 
 		// Armor
 		//-------------------------------------------------------------------------------------------------------------
@@ -2467,7 +2504,7 @@
 		"GibType"		"goo"
 		"GibTintColor"	"73 82 68 255"
 
-		"AbilityLayout"				"8"
+		"AbilityLayout"				"6"
 
 		"Ability1"					"undying_hook"
 		"Ability2"					"undying_infest_blood"
@@ -2494,6 +2531,10 @@
         "Ability22"      "barebones_empty22"
         "Ability23"      "barebones_empty23"
         "Ability24"      "barebones_empty24"
+        "Ability25"      "barebones_empty25"
+        "Ability26"      "barebones_empty26"
+        "Ability27"      "barebones_empty27"
+        "Ability28"      "barebones_empty28"
 
 		// Armor
 		//-------------------------------------------------------------------------------------------------------------

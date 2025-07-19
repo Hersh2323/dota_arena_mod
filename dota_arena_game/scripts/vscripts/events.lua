@@ -155,21 +155,14 @@ function barebones:OnHeroInGame(hero)
 		end
 	end
 
-    for abilitySlot=0,24 do
+    for abilitySlot=0,28 do
         local ability = hero:GetAbilityByIndex(abilitySlot)
 
         if ability then
 			ability:SetLevel(1)
 			hero:SetAbilityPoints(hero:GetAbilityPoints() - 1)
+			DebugPrint("Leveled up ability: " .. ability:GetAbilityName() )
         end
-    end
-
-    for abilitySlot=0,32 do
-        local ability = hero:GetAbilityByIndex(abilitySlot)
-
-        if ability then
-			DebugPrint("hero: " .. hero:GetName() ..  " Ability: " .. ability:GetName() .. " found in slot: " .. abilitySlot)
-		end
     end
 
 
