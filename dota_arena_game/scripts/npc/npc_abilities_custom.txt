@@ -1,9 +1,3 @@
-// Tutorial how to use #base:
-// https://moddota.com/tools/combining-kv-files-using-base
-#base "abilities/dummy_unit_ability.txt"
-#base "abilities/chaos_knight_reality_rift.txt"
-#base "abilities/detonator_conjure_image.txt"
-
 "DOTAAbilities"
 {
 	// ability_datadriven example
@@ -620,11 +614,6 @@
 				"EffectAttachType"	"follow_origin"
 			}
 
-			"RunScript"
-			{
-				"ScriptFile"	"heroes/globalcooldown.lua"
-				"Function"		"globalCooldown"
-			}
 		}
 	}
 
@@ -1651,11 +1640,6 @@
 				"Target"			"TARGET"
 			}
 
-			"RunScript"
-			{
-			    "ScriptFile"    "heroes/globalcooldown.lua"
-			    "Function"      "activate_gcd_without_ability_specific"
-			}
 		}
 	
 		"Modifiers"
@@ -2462,13 +2446,6 @@
 
 		"OnSpellStart"
 		{
-			"RunScript"
-			{
-				"ScriptFile"	"heroes/globalcooldown.lua"
-				"Function"		"globalCooldown"
-			}
-
-
 			"ApplyModifier"
 			{
 				"ModifierName"		"modifier_external_silence_crystal_maiden_debuff_magical_datadriven"
@@ -5470,16 +5447,6 @@
 			}
 		}
 	
-		"OnAbilityPhaseStart"
-		{
-			"RunScript"
-			{
-			    "ScriptFile"    "heroes/globalcooldown.lua"
-			    "Function"      "activate_gcd_without_ability_specific"
-			}
-
-		}
-
 		"OnChannelSucceeded"
 		{
 			"RunScript"
@@ -5504,12 +5471,6 @@
 			{
 			    "ScriptFile"    "heroes/refund_channel_interrupted.lua"
 			    "Function"      "general_channel_refund"
-			}
-
-			"RunScript"
-			{
-			    "ScriptFile"    "heroes/globalcooldown.lua"
-			    "Function"      "gcd_cancel"
 			}
 	    }
 
@@ -5803,14 +5764,6 @@
 
 
 
-	    "OnAbilityPhaseStart"
-	    {
-			//"RunScript"
-			//{
-			//    "ScriptFile"    "heroes/globalcooldown.lua"
-			//    "Function"      "activate_gcd_without_ability_specific"
-			//}
-	    }
 
 	    "OnChannelSucceeded"
 	    {
@@ -5838,12 +5791,6 @@
 	    	    "ScriptFile"    "heroes/refund_channel_interrupted.lua"
 	    	    "Function"      "general_channel_refund"
 	    	}
-
-			"RunScript"
-			{
-			    "ScriptFile"    "heroes/globalcooldown.lua"
-			    "Function"      "gcd_cancel"
-			}
 	    }
 
 	    "OnProjectileHitUnit"
@@ -5997,15 +5944,6 @@
 	    	"Particles"		"particles/units/heroes/hero_skeletonking/wraith_king_ghosts_ambient.vpcf"
 	    }
 
-	    "OnAbilityPhaseStart"
-	    {
-			"RunScript"
-			{
-			    "ScriptFile"    "heroes/globalcooldown.lua"
-			    "Function"      "activate_gcd_without_ability_specific"
-			}
-	    }
-
 	    "OnChannelSucceeded"
 	    {
 			"RunScript"
@@ -6038,12 +5976,6 @@
 			{
 			    "ScriptFile"    "heroes/refund_channel_interrupted.lua"
 			    "Function"      "general_channel_refund"
-			}
-
-			"RunScript"
-			{
-			    "ScriptFile"    "heroes/globalcooldown.lua"
-			    "Function"      "gcd_cancel"
 			}
 	    }
 
@@ -6202,14 +6134,6 @@
 			    "ScriptFile"    "heroes/animations.lua"
 			    "Function"      "necro_summon_animation"
 			}
-
-
-			"RunScript"
-			{
-			    "ScriptFile"    "heroes/globalcooldown.lua"
-			    "Function"      "activate_gcd_without_ability_specific"
-			}
-
 			"SpawnUnit"
 			{
 				"UnitName"	"npc_necrolyte_ghost"
@@ -6324,11 +6248,6 @@
 				"Target"		"TARGET"
 			}
 
-			"RunScript"
-			{
-			    "ScriptFile"    "heroes/globalcooldown.lua"
-			    "Function"      "activate_gcd_without_ability_specific"
-			}
 	    }
 
 	    "OnProjectileHitUnit"
@@ -7555,12 +7474,6 @@
 	    {
 			"RunScript"
 			{
-			    "ScriptFile"    "heroes/globalcooldown.lua"
-			    "Function"      "gcd_cancel"
-			}
-
-			"RunScript"
-			{
 			    "ScriptFile"    "heroes/refund_channel_interrupted.lua"
 			    "Function"      "general_channel_refund"
 			}
@@ -7568,11 +7481,6 @@
 
 	    "OnAbilityPhaseStart"
 	    {
-			"RunScript"
-			{
-			    "ScriptFile"    "heroes/globalcooldown.lua"
-			    "Function"      "activate_gcd_without_ability_specific"
-			}
 	    }
 
 
@@ -10056,12 +9964,6 @@
 				"Function"		"comboPointSpendAllHasteStrikes"
 				"modifier_stack"	"modifier_bh_combo_points_datadriven"
 			}
-
-			"RunScript"
-			{
-			    "ScriptFile"    "heroes/globalcooldown.lua"
-			    "Function"      "activate_gcd_without_ability_specific"
-			}
 		}
 	
 		"Modifiers"
@@ -10600,12 +10502,6 @@
 			{
 				"EffectName"		"Hero_Riki.Blink_Strike"
 				"Target"			"TARGET"
-			}
-
-			"RunScript"
-			{
-			    "ScriptFile"    "heroes/globalcooldown.lua"
-			    "Function"      "activate_gcd_without_ability_specific"
 			}
 		}
 
@@ -11492,12 +11388,6 @@
 				"ScriptFile"		"heroes/diminishing_returns/controlled_stun.lua"
 				"Function"			"paControlledStunCheck"
 			}
-
-			"RunScript"
-			{
-			    "ScriptFile"    "heroes/globalcooldown.lua"
-			    "Function"      "activate_gcd_without_ability_specific"
-			}
 		}
 	
 		"Modifiers"
@@ -11902,12 +11792,6 @@
 			{
 				"Target" 			"CASTER"
 				"ModifierName"		"modifier_pa_meld_buff_datadriven"
-			}
-
-			"RunScript"
-			{
-			    "ScriptFile"    "heroes/globalcooldown.lua"
-			    "Function"      "activate_gcd_without_ability_specific"
 			}
 		}
 	
@@ -12849,12 +12733,6 @@
 	            "ProvidesVision"    "0"
 	            "MoveSpeed"         "%projectile_speed"
 		        "SourceAttachment"  "DOTA_PROJECTILE_ATTACHMENT_ATTACK_1"
-		    }
-
-		    "RunScript"
-		    {
-		        "ScriptFile"    "heroes/globalcooldown.lua"
-		        "Function"      "activate_gcd_without_ability_specific"
 		    }
 		}
 
@@ -17199,12 +17077,6 @@
 				"ScriptFile"		"heroes/diminishing_returns/controlled_stun.lua"
 				"Function"			"bhControlledStunCheck"
 			}
-
-			"RunScript"
-			{
-			    "ScriptFile"    "heroes/globalcooldown.lua"
-			    "Function"      "activate_gcd_without_ability_specific"
-			}
 		}
 	
 		"Modifiers"
@@ -17563,13 +17435,6 @@
 						"Duration"		"%slow_duration"
 					}
 				}
-			}
-
-
-			"RunScript"
-			{
-				"ScriptFile"	"heroes/globalcooldown.lua"
-				"Function"		"globalCooldown"
 			}
 
 			"RunScript"
@@ -18191,13 +18056,6 @@
 				"ScriptFile"	"heroes/globaled_hero_lina/slowburn.lua"
 				"Function"		"slowBurnApplication"
 			}
-
-			"RunScript"
-			{
-				"ScriptFile"	"heroes/globalcooldown.lua"
-				"Function"		"globalCooldown"
-			}
-
 
 			"FireEffect"
 			{

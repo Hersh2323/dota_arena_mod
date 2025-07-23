@@ -1256,12 +1256,6 @@
 	            "ModifierName"  "modifier_external_ice_cube_state_crystal_maiden_buff_magical_undispellable_datadriven"
 	            "Target"        "CASTER"
 	        }
-
-			"RunScript"
-			{
-				"ScriptFile"	"heroes/globalcooldown.lua"
-				"Function"		"globalCooldown"
-			}
 	    }
 	
 	    "Modifiers"
@@ -3370,13 +3364,6 @@
     {
 		"RunScript"
 		{
-		    "ScriptFile"    "heroes/globalcooldown.lua"
-		    "Function"      "activate_gcd_without_ability_specific"
-		}
-
-
-		"RunScript"
-		{
 		    "ScriptFile"    "heroes/animations.lua"
 		    "Function"      "necro_instant_cast_animation"
 		}
@@ -3522,12 +3509,6 @@
 		    "Function"      "necro_instant_cast_animation"
 		}
 
-		"RunScript"
-		{
-		    "ScriptFile"    "heroes/globalcooldown.lua"
-		    "Function"      "activate_gcd_without_ability_specific"
-		}
-
 		"TrackingProjectile"
         {
             "Target"			"TARGET"
@@ -3659,13 +3640,6 @@
 
 				"blinkParticle"			"particles/items_fx/blink_dagger_start_sparkles.vpcf"
 			}
-
-			"RunScript"
-			{
-			    "ScriptFile"    "heroes/globalcooldown.lua"
-			    "Function"      "activate_gcd_without_ability_specific"
-			}
-
 		}
 
 		"OnAbilityPhaseStart"
@@ -5717,12 +5691,6 @@
 					}
 				}
 			}
-
-			"RunScript"
-			{
-			    "ScriptFile"    "heroes/globalcooldown.lua"
-			    "Function"      "activate_gcd_without_ability_specific"
-			}
 	    }
 	}
 
@@ -5797,11 +5765,6 @@
 				"Function"			"determineSheepDuration"
 			}
 
-			"RunScript"
-			{
-				"ScriptFile"	"heroes/globalcooldown.lua"
-				"Function"		"globalCooldown"
-			}
 		}
 
 		"OnChannelInterrupted"
@@ -5992,15 +5955,6 @@
 			}
 		}
 		
-		"OnAbilityPhaseStart"
-		{
-			"RunScript"
-			{
-			    "ScriptFile"    "heroes/globalcooldown.lua"
-			    "Function"      "activate_gcd_without_ability_specific"
-			}
-		}
-
 		"OnChannelSucceeded"
 		{
 			"RemoveModifier"
@@ -6037,11 +5991,6 @@
 			    "Function"      "general_channel_refund"
 			}
 
-			"RunScript"
-			{
-			    "ScriptFile"    "heroes/globalcooldown.lua"
-			    "Function"      "gcd_cancel"
-			}
 	    }
 
 	
@@ -6649,17 +6598,6 @@
     }
 
 
-    "OnAbilityPhaseStart"
-    {
-		"RunScript"
-		{
-		    "ScriptFile"    "heroes/globalcooldown.lua"
-		    "Function"      "activate_gcd_without_ability_specific"
-		}
-    }
-
-
-
     "OnChannelSucceeded"
     {
 		"TrackingProjectile"
@@ -6680,12 +6618,6 @@
 		{
 		    "ScriptFile"    "heroes/refund_channel_interrupted.lua"
 		    "Function"      "general_channel_refund"
-		}
-
-		"RunScript"
-		{
-		    "ScriptFile"    "heroes/globalcooldown.lua"
-		    "Function"      "gcd_cancel"
 		}
     }
 
@@ -8177,11 +8109,6 @@
 				}
 			}
 
-			"RunScript"
-			{
-				"ScriptFile"	"heroes/globalcooldown.lua"
-				"Function"		"globalCooldown"
-			}
 		}
 	
 		"Modifiers"
