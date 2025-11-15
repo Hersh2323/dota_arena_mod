@@ -55,7 +55,7 @@
  		"Ability6"				"frc_pb"
 
         "Ability7"      "barebones_empty7"
-        "Ability8"      "all_heroes_gcd_datadriven"
+        "Ability8"      "barebones_empty8"
         "Ability9"      "barebones_empty9"
         "Ability10"      "barebones_empty10"
         "Ability11"      "barebones_empty11"
